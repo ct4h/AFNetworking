@@ -21,6 +21,7 @@
 
 #import "AFURLSessionManager.h"
 #import <objc/runtime.h>
+#import "NSURLSessionTask+Serializer.h"
 
 #ifndef NSFoundationVersionNumber_iOS_8_0
 #define NSFoundationVersionNumber_With_Fixed_5871104061079552_bug 1140.11
@@ -258,7 +259,13 @@ didCompleteWithError:(NSError *)error
     __block id responseObject = nil;
 
     __block NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-    userInfo[AFNetworkingTaskDidCompleteResponseSerializerKey] = manager.responseSerializer;
+    
+    if (!task.responseSerializer){
+        userInfo[AFNetworkingTaskDidCompleteResponseSerializerKey] = manager.responseSerializer;
+    }else{
+        userInfo[AFNetworkingTaskDidCompleteResponseSerializerKey] = task.responseSerializer;
+    }
+    
 
     //Performance Improvement from #2672
     NSData *data = nil;

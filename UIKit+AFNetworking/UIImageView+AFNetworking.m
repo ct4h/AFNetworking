@@ -22,6 +22,7 @@
 #import "UIImageView+AFNetworking.h"
 
 #import <objc/runtime.h>
+#import "NSURLSessionTask+Serializer.h"
 
 #if TARGET_OS_IOS || TARGET_OS_TV
 
@@ -80,21 +81,35 @@
                        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
 {
 
+    [self setImageWithURLRequest:urlRequest
+                placeholderImage:placeholderImage
+                 imageSerializer:nil
+                         success:success
+                         failure:failure];
+    
+}
+
+- (void)setImageWithURLRequest:(NSURLRequest *)urlRequest
+              placeholderImage:(nullable UIImage *)placeholderImage
+               imageSerializer:(AFImageResponseSerializer *)serializer
+                       success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                       failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure {
+    
     if ([urlRequest URL] == nil) {
         [self cancelImageDownloadTask];
         self.image = placeholderImage;
         return;
     }
-
+    
     if ([self isActiveTaskURLEqualToURLRequest:urlRequest]){
         return;
     }
-
+    
     [self cancelImageDownloadTask];
-
+    
     AFImageDownloader *downloader = [[self class] sharedImageDownloader];
     id <AFImageRequestCache> imageCache = downloader.imageCache;
-
+    
     //Use the image from the image cache if it exists
     UIImage *cachedImage = [imageCache imageforRequest:urlRequest withAdditionalIdentifier:nil];
     if (cachedImage) {
@@ -108,7 +123,7 @@
         if (placeholderImage) {
             self.image = placeholderImage;
         }
-
+        
         __weak __typeof(self)weakSelf = self;
         NSUUID *downloadID = [NSUUID UUID];
         AFImageDownloadReceipt *receipt;
@@ -125,18 +140,20 @@
                            }
                            [strongSelf clearActiveDownloadInformation];
                        }
-
+                       
                    }
                    failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
                        __strong __typeof(weakSelf)strongSelf = weakSelf;
-                        if ([strongSelf.af_activeImageDownloadReceipt.receiptID isEqual:downloadID]) {
-                            if (failure) {
-                                failure(request, response, error);
-                            }
-                            [strongSelf clearActiveDownloadInformation];
-                        }
+                       if ([strongSelf.af_activeImageDownloadReceipt.receiptID isEqual:downloadID]) {
+                           if (failure) {
+                               failure(request, response, error);
+                           }
+                           [strongSelf clearActiveDownloadInformation];
+                       }
                    }];
-
+        
+        receipt.task.responseSerializer = serializer;
+        
         self.af_activeImageDownloadReceipt = receipt;
     }
 }

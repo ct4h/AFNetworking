@@ -20,6 +20,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "AFURLResponseSerialization.h"
 
 #import <TargetConditionals.h>
 
@@ -97,6 +98,11 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
                        failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 
+- (void)setImageWithURLRequest:(NSURLRequest *)urlRequest
+              placeholderImage:(nullable UIImage *)placeholderImage
+               imageSerializer:(nullable AFImageResponseSerializer *)serializer
+                       success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                       failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 /**
  Cancels any executing image operation for the receiver, if one exists.
  */

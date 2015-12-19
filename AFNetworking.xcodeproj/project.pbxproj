@@ -172,6 +172,14 @@
 		29D96E981BCC406B00F571A5 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 299522921BBF13C700859F49 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29D96E991BCC406B00F571A5 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 299522931BBF13C700859F49 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29D96E9A1BCC406B00F571A5 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 299522961BBF13C700859F49 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50BD5D601C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BD5D5E1C25F55900BF23B5 /* NSURLSessionTask+Serializer.h */; };
+		50BD5D611C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BD5D5E1C25F55900BF23B5 /* NSURLSessionTask+Serializer.h */; };
+		50BD5D621C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BD5D5E1C25F55900BF23B5 /* NSURLSessionTask+Serializer.h */; };
+		50BD5D631C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BD5D5E1C25F55900BF23B5 /* NSURLSessionTask+Serializer.h */; };
+		50BD5D641C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5D5F1C25F55900BF23B5 /* NSURLSessionTask+Serializer.m */; };
+		50BD5D651C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5D5F1C25F55900BF23B5 /* NSURLSessionTask+Serializer.m */; };
+		50BD5D661C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5D5F1C25F55900BF23B5 /* NSURLSessionTask+Serializer.m */; };
+		50BD5D671C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5D5F1C25F55900BF23B5 /* NSURLSessionTask+Serializer.m */; };
 		5F4323BB1BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5F4323B31BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer */; };
 		5F4323BC1BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5F4323B31BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer */; };
 		5F4323BD1BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5F4323B31BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer */; };
@@ -292,6 +300,8 @@
 		2995229A1BBF13C700859F49 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		2995229B1BBF13C700859F49 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		29D3413E1C20D46400A7D266 /* AFCompoundResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCompoundResponseSerializerTests.m; sourceTree = "<group>"; };
+		50BD5D5E1C25F55900BF23B5 /* NSURLSessionTask+Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+Serializer.h"; sourceTree = "<group>"; };
+		50BD5D5F1C25F55900BF23B5 /* NSURLSessionTask+Serializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+Serializer.m"; sourceTree = "<group>"; };
 		5F4323B31BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = Equifax_Secure_Certificate_Authority_Root.cer; sourceTree = "<group>"; };
 		5F4323B41BF63741003B8749 /* GeoTrust_Global_CA-cross.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoTrust_Global_CA-cross.cer"; sourceTree = "<group>"; };
 		5F4323B51BF63741003B8749 /* google.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = google.com.cer; sourceTree = "<group>"; };
@@ -505,6 +515,8 @@
 				299522501BBF125A00859F49 /* AFURLResponseSerialization.m */,
 				299522511BBF125A00859F49 /* AFURLSessionManager.h */,
 				299522521BBF125A00859F49 /* AFURLSessionManager.m */,
+				50BD5D5E1C25F55900BF23B5 /* NSURLSessionTask+Serializer.h */,
+				50BD5D5F1C25F55900BF23B5 /* NSURLSessionTask+Serializer.m */,
 			);
 			path = AFNetworking;
 			sourceTree = "<group>";
@@ -570,6 +582,7 @@
 				29D96E981BCC406B00F571A5 /* UIImage+AFNetworking.h in Headers */,
 				29D96E991BCC406B00F571A5 /* UIImageView+AFNetworking.h in Headers */,
 				29D96E9A1BCC406B00F571A5 /* UIProgressView+AFNetworking.h in Headers */,
+				50BD5D631C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */,
 				29D96E8E1BCC3D7D00F571A5 /* AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,6 +604,7 @@
 				299522A21BBF13C700859F49 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				2995223D1BBF104D00859F49 /* AFNetworking.h in Headers */,
 				299522B01BBF13C700859F49 /* UIWebView+AFNetworking.h in Headers */,
+				50BD5D601C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */,
 				299522AC1BBF13C700859F49 /* UIProgressView+AFNetworking.h in Headers */,
 				299522A61BBF13C700859F49 /* UIButton+AFNetworking.h in Headers */,
 				299522A01BBF13C700859F49 /* AFNetworkActivityIndicatorManager.h in Headers */,
@@ -602,6 +616,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD5D611C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */,
 				29D96E7A1BCC3D6000F571A5 /* AFHTTPSessionManager.h in Headers */,
 				29D96E7C1BCC3D6000F571A5 /* AFSecurityPolicy.h in Headers */,
 				29D96E7D1BCC3D6000F571A5 /* AFURLRequestSerialization.h in Headers */,
@@ -618,6 +633,7 @@
 				29D96E811BCC3D7200F571A5 /* AFHTTPSessionManager.h in Headers */,
 				29D96E821BCC3D7200F571A5 /* AFNetworkReachabilityManager.h in Headers */,
 				29D96E831BCC3D7200F571A5 /* AFSecurityPolicy.h in Headers */,
+				50BD5D621C25F55900BF23B5 /* NSURLSessionTask+Serializer.h in Headers */,
 				29D96E841BCC3D7200F571A5 /* AFURLRequestSerialization.h in Headers */,
 				29D96E851BCC3D7200F571A5 /* AFURLResponseSerialization.h in Headers */,
 				29D96E861BCC3D7200F571A5 /* AFURLSessionManager.h in Headers */,
@@ -929,6 +945,7 @@
 				2987B0BD1BC408D900179A4C /* AFNetworkReachabilityManager.m in Sources */,
 				2987B0BE1BC408D900179A4C /* AFSecurityPolicy.m in Sources */,
 				2987B0BC1BC408D900179A4C /* AFHTTPSessionManager.m in Sources */,
+				50BD5D671C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */,
 				2987B0C11BC408D900179A4C /* AFURLSessionManager.m in Sources */,
 				2987B0C71BC408F900179A4C /* UIProgressView+AFNetworking.m in Sources */,
 				2987B0BF1BC408D900179A4C /* AFURLRequestSerialization.m in Sources */,
@@ -1015,6 +1032,7 @@
 				299522591BBF125A00859F49 /* AFSecurityPolicy.m in Sources */,
 				299522A71BBF13C700859F49 /* UIButton+AFNetworking.m in Sources */,
 				299522541BBF125A00859F49 /* AFHTTPSessionManager.m in Sources */,
+				50BD5D641C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */,
 				2995225F1BBF125A00859F49 /* AFURLSessionManager.m in Sources */,
 				2995225B1BBF125A00859F49 /* AFURLRequestSerialization.m in Sources */,
 				2995229D1BBF13C700859F49 /* AFAutoPurgingImageCache.m in Sources */,
@@ -1033,6 +1051,7 @@
 				2995226F1BBF133400859F49 /* AFURLRequestSerialization.m in Sources */,
 				2995226E1BBF133400859F49 /* AFSecurityPolicy.m in Sources */,
 				299522701BBF133400859F49 /* AFURLResponseSerialization.m in Sources */,
+				50BD5D651C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */,
 				2995226D1BBF133400859F49 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,6 +1064,7 @@
 				299522811BBF13A100859F49 /* AFSecurityPolicy.m in Sources */,
 				2995227F1BBF13A100859F49 /* AFHTTPSessionManager.m in Sources */,
 				299522841BBF13A100859F49 /* AFURLSessionManager.m in Sources */,
+				50BD5D661C25F55900BF23B5 /* NSURLSessionTask+Serializer.m in Sources */,
 				299522821BBF13A100859F49 /* AFURLRequestSerialization.m in Sources */,
 				299522831BBF13A100859F49 /* AFURLResponseSerialization.m in Sources */,
 			);
