@@ -40,6 +40,11 @@ EOS
     ss.osx.frameworks = 'CoreServices'
   end
 
+  s.subspec 'Task+Serialization' do |ss|
+    ss.source_files = 'AFNetworking/NSURLSessionTask+Serializer.{h,m}'
+    ss.public_header_files = 'AFNetworking/NSURLSessionTask+Serializer.h'
+  end
+  
   s.subspec 'Security' do |ss|
     ss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
     ss.public_header_files = 'AFNetworking/AFSecurityPolicy.h'
