@@ -196,6 +196,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)invalidateSessionCancelingTasks:(BOOL)cancelPendingTasks;
 
+
+/**
+ * Фикс бага с утечкой памяти
+ */
+- (void)endSession;
+
 ///-------------------------
 /// @name Running Data Tasks
 ///-------------------------

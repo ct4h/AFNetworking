@@ -563,6 +563,13 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     return self;
 }
 
+- (void)endSession {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_session invalidateAndCancel];
+        _session = nil;
+    });
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
